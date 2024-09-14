@@ -8,6 +8,6 @@ Nos tipos mais comuns de bancos de dados em uso atualmente, as informações sã
 
 A figura abaixo ilustra um sistema de banco de dados, composto por dados, hardware, software e usuários. Observa-se que o SGBD é responsável pelo gerenciamento do banco de dados.
 
-<div style="display:flex; justify-content:center; align-items:center">
-    <img src="./imgs/sistema_bd.png" style="width:50%; border-radius: 10px;"/>
+<div align="center">
+    <img src="./imgs/sistema_bd.png" width="50%"/>
 </div>
