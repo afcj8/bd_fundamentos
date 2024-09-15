@@ -8,3 +8,16 @@ Um projeto bem estruturado é essencial para garantir a organização eficiente 
     <img src="../imgs/projeto_bd.png" width="50%"/>
     <p>Figura 1.2: Etapas do projeto de banco de dados.</p>
 </div>
+
+## 1.1. Modelo Conceitual
+
+O modelo conceitual é uma etapa essencial no desenvolvimento de um banco de dados eficiente e organizado. Ele consiste em representar a estrutura dos dados de forma abstrata, sem incluir detalhes específicos de implementação em um Sistema de Gerenciamento de Banco de Dados (SGBD). Durante esse processo, são identificadas as entidades relevantes, seus atributos e os relacionamentos entre elas, determinando quais dados serão incluídos no banco de dados. Embora o modelo conceitual descreva as informações que devem ser armazenadas, ele não define como esses dados serão fisicamente organizados ou gerenciados no nível do SGBD.
+
+A técnica mais amplamente utilizada para modelagem conceitual é a abordagem Entidade-Relacionamento (ER), que geralmente é representada por um Diagrama Entidade-Relacionamento (DER). Esse diagrama oferece uma visão clara das entidades e suas inter-relações. A Figura 1.3, por exemplo, apresenta um DER parcial de um sistema de biblioteca.
+
+<div align="center">
+    <img src="../imgs/ex_modelo_conceitual.png" width="50%"/>
+    <p>Figura 1.3: Exemplo de modelo conceitual.</p>
+</div>
+
+Esse modelo demonstra que o banco de dados contém informações sobre livros e editoras. Para cada livro, são armazenados dados como código, título, preço, autor, ano de publicação e a editora associada. Para cada editora, o banco de dados registra o código, nome, telefone e os livros vinculados a ela.
