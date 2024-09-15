@@ -34,5 +34,5 @@ Auto-relacionamento é uma associação entre registros de uma mesma entidade. N
 
 <div align="center">
     <img src="../imgs/representacao_grafica_auto_relacionamento.png" width="50%"/>
-    <p>Figura 2.3: Representação gráfica de relacionamento.</p>
+    <p>Figura 2.3: Representação gráfica de auto-relacionamento.</p>
 </div>
