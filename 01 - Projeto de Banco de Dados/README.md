@@ -30,3 +30,29 @@ O modelo lógico de um banco de dados descreve a estrutura e as relações entre
     <img src="../imgs/ex_modelo_logico.png" width="50%"/>
     <p>Figura 1.4: Exemplo de modelo lógico.</p>
 </div>
+
+## 1.3. Modelo Físico
+
+O modelo físico de um banco de dados corresponde à sua implementação real em um Sistema de Gerenciamento de Banco de Dados (SGBD), contemplando especificações técnicas como tipos de dados, índices, partições e o armazenamento dos dados no disco. Abaixo, segue um exemplo de script em PostgreSQL, baseado no modelo lógico da Figura 1.4:
+
+```
+/* Criar tabela editora */
+CREATE TABLE editora (
+    cod_editora SERIAL PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    telefone VARCHAR(15)
+);
+
+/* Criar tabela livro */
+CREATE TABLE livro (
+    cod_livro SERIAL PRIMARY KEY,
+    titulo VARCHAR(50) NOT NULL,
+    autor VARCHAR(50),
+    preco DECIMAL(10, 2) NOT NULL,
+    ano_publicacao DATE,
+    cod_editora INTEGER,
+    FOREIGN KEY (cod_editora) REFERENCES editora(cod_editora)
+);
+```
+
+A modelagem conceitual, lógica e física são etapas essenciais no desenvolvimento de um projeto de banco de dados eficiente e confiável. Seguir essas etapas garante a organização e a segurança dos dados, melhora a qualidade do sistema e otimiza seu desempenho.
