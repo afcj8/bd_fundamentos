@@ -27,3 +27,12 @@ Em um Diagrama Entidade-Relacionamento (DER), os relacionamentos são representa
 </div>
 
 No exemplo, o relacionamento Lotação representa uma associação específica, formada por uma associação entre uma instância da entidade Pessoa e uma instância da entidade Departamento.
+
+### 2.2.1. Auto-relacionamento
+
+Auto-relacionamento é uma associação entre registros de uma mesma entidade. Nesse caso, é necessário introduzir o conceito de papel da entidade no relacionamento. Por exemplo, em um relacionamento de casamento, um registro da entidade Pessoa assume o papel de marido, enquanto outro registro assume o papel de esposa. Os papéis são indicados no DER, conforme ilustrado na Figura 2.3.
+
+<div align="center">
+    <img src="../imgs/representacao_grafica_auto_relacionamento.png" width="50%"/>
+    <p>Figura 2.3: Representação gráfica de relacionamento.</p>
+</div>
