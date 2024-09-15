@@ -20,8 +20,6 @@ A técnica mais amplamente utilizada para modelagem conceitual é a abordagem En
     <p>Figura 1.3: Exemplo de modelo conceitual.</p>
 </div>
 
-Esse modelo demonstra que o banco de dados contém informações sobre livros e editoras. Para cada livro, são armazenados dados como código, título, preço, autor, ano de publicação e a editora associada. Para cada editora, o banco de dados registra o código, nome, telefone e os livros vinculados a ela.
-
 ## 1.2. Modelo Lógico
 
 O modelo lógico de um banco de dados descreve a estrutura e as relações entre os dados em um nível de abstração, focando na organização das entidades e suas interações dentro de um Sistema de Gerenciamento de Banco de Dados (SGBD). Ele é dependente do tipo de SGBD utilizado, como o relacional, no qual os dados são organizados em tabelas. Embora seja uma representação abstrata, o modelo lógico define quais tabelas compõem o banco de dados e, para cada uma, especifica os nomes das colunas e suas respectivas características. A Figura 1.4 ilustra um exemplo de banco de dados relacional projetado a partir do modelo conceitual apresentado na Figura 1.3.
@@ -30,6 +28,8 @@ O modelo lógico de um banco de dados descreve a estrutura e as relações entre
     <img src="../imgs/ex_modelo_logico.png" width="50%"/>
     <p>Figura 1.4: Exemplo de modelo lógico.</p>
 </div>
+
+Esse modelo demonstra que o banco de dados contém informações sobre livros e editoras. Para cada livro, são armazenados dados como código, título, preço, autor, ano de publicação, edição e a editora associada. Para cada editora, o banco de dados registra o código, nome, telefone e os livros vinculados a ela.
 
 ## 1.3. Modelo Físico
 
@@ -47,9 +47,10 @@ CREATE TABLE editora (
 CREATE TABLE livro (
     cod_livro SERIAL PRIMARY KEY,
     titulo VARCHAR(50) NOT NULL,
-    autor VARCHAR(50),
     preco DECIMAL(10, 2) NOT NULL,
+    autor VARCHAR(50) NOT NULL,
     ano_publicacao DATE,
+    edicao INTERGER,
     cod_editora INTEGER,
     FOREIGN KEY (cod_editora) REFERENCES editora(cod_editora)
 );
