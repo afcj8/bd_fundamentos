@@ -36,3 +36,7 @@ Auto-relacionamento é uma associação entre registros de uma mesma entidade. N
     <img src="../imgs/representacao_grafica_auto_relacionamento.png" width="50%"/>
     <p>Figura 2.3: Representação gráfica de auto-relacionamento.</p>
 </div>
+
+## 2.3. Cardinalidade 
+
+Para o projeto de banco de dados, uma característica importante de um relacionamento é o número de registros de uma entidade que podem ser associados a um registro específico de outra entidade por meio do relacionamento. Essa característica é conhecida como cardinalidade do relacionamento. Existem dois tipos de cardinalidade a considerar: a cardinalidade máxima e a cardinalidade mínima.
