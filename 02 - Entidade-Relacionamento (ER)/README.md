@@ -66,3 +66,8 @@ A cardinalidade máxima é utilizada para classificar relacionamentos binários,
     <img src="../imgs/relacionamento_1_para_1.png" width="50%"/>
     <p>Figura 2.5: Relacionamento 1:1.</p>
 </div>
+
+<div align="center">
+    <img src="../imgs/relacionamento_1_para_n.png" width="50%"/>
+    <p>Figura 2.6: Relacionamento 1:n.</p>
+</div>
