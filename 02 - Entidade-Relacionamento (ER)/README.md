@@ -111,4 +111,9 @@ A cardinalidade mínima é representada junto à cardinalidade máxima no diagra
 
 Para associar informações a ocorrências de entidades ou relacionamentos, utiliza-se o conceito de atributo. Um atributo é um dado associado a cada ocorrência de uma entidade ou relacionamento.
 
-Graficamente, os atributos são representados conforme ilustrado na Figura 2.10. A figura mostra que, para cada ocorrência da entidade Projeto, são associados exatamente um nome, um código e um tipo
+Graficamente, os atributos são representados conforme ilustrado na Figura 2.10. A figura mostra que, para cada ocorrência da entidade Projeto, são associados exatamente um código, um nome e um tipo.
+
+<div align="center">
+    <img src="../imgs/atributos.png" width="50%"/>
+    <p>Figura 2.10: Atributos de uma entidade.</p>
+</div>
