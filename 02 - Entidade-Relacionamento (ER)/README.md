@@ -60,7 +60,7 @@ De acordo com a Figura 2.4, pode-se observar que:
 
 ### 2.3.2. Classificação de Relacionamentos Binários
 
-A cardinalidade máxima é utilizada para classificar relacionamentos binários, que envolvem duas entidades. Esses relacionamentos podem ser categorizados como muitos-para-muitos (n:n), um-para-muitos (1:n) ou um-para-um (1:1). O que determina o fato de o relacionamento ser binário é o número de ocorrências de entidade que participam de cada ocorrência do relacionamento.
+A cardinalidade máxima é utilizada para classificar relacionamentos binários, que envolvem duas entidades. Esses relacionamentos podem ser categorizados como muitos-para-muitos (n:n), um-para-muitos (1:n) ou um-para-um (1:1). O que determina o fato de o relacionamento ser binário é o número de ocorrências de entidade que participam de cada ocorrência do relacionamento. As Figuras 2.5, 2.6 e 2.7 a seguir ilustram as diferentes formas de relacionamentos binários.
 
 <div align="center">
     <img src="../imgs/relacionamento_1_para_1.png" width="50%"/>
@@ -70,4 +70,9 @@ A cardinalidade máxima é utilizada para classificar relacionamentos binários,
 <div align="center">
     <img src="../imgs/relacionamento_1_para_n.png" width="50%"/>
     <p>Figura 2.6: Relacionamento 1:n.</p>
+</div>
+
+<div align="center">
+    <img src="../imgs/relacionamento_n_para_n.png" width="50%"/>
+    <p>Figura 2.7: Relacionamento n:n.</p>
 </div>
