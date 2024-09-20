@@ -37,6 +37,23 @@ Auto-relacionamento é uma associação entre registros de uma mesma entidade. N
     <p>Figura 2.3: Representação gráfica de auto-relacionamento.</p>
 </div>
 
-## 2.3. Cardinalidade 
+## 2.3. Cardinalidade
 
 Para o projeto de banco de dados, uma característica importante de um relacionamento é o número de registros de uma entidade que podem ser associados a um registro específico de outra entidade por meio do relacionamento. Essa característica é conhecida como cardinalidade do relacionamento. Existem dois tipos de cardinalidade a considerar: a cardinalidade máxima e a cardinalidade mínima.
+
+### 2.3.1. Cardinalidade Máxima
+
+A Cardinalidade Máxima refere-se ao número máximo de vezes que uma entidade A pode estar associada a uma entidade B. Esse valor pode ser 1, indicando uma única associação, ou N, quando múltiplas associações são permitidas.
+
+No Diagrama Entidade-Relacionamento (DER), a cardinalidade máxima é representada conforme mostrado na Figura 2.4. Embora a convenção possa inicialmente parecer contraintuitiva, ela é anotada no lado oposto ao relacionamento ao qual se refere. Por exemplo, a cardinalidade máxima da entidade Eempregado no relacionamento Lotação é indicada junto ao símbolo da entidade Departamento.
+
+<div align="center">
+    <img src="../imgs/cardinalidade_maxima.png" width="50%"/>
+    <p>Figura 2.4: Cardinalidade máxima de relacionamento.</p>
+</div>
+
+De acordo com a Figura 2.4, pode-se observar que:
+
+- Uma ocorrência da entidade Empregado pode estar associada, no máximo, uma ocorrência de Departamento (localizada no lado oposto da anotação).
+
+- Uma ocorrência da entidade Departamento podem estar associadas várias ocorrências de Empregado (localizada no lado oposto da anotação).
