@@ -93,3 +93,11 @@ A cardinalidade "1" refere-se ao par cidade e produto, indicando que cada combin
 Para o par cidade e distribuidor, podem estar associados vários produtos, ou seja, um distribuidor pode distribuir muitos produtos em uma cidade.
 
 Para o par produto e distribuidor, podem estar associadas várias cidades, ou seja, um distribuidor pode distribuir um produto em diversas cidade
+
+### 2.3.4. Cardinalidade Mínima
+
+Além da cardinalidade máxima, o modelo ER também pode representar o número mínimo de ocorrências de uma entidade associadas a outra entidade por meio de um relacionamento. Para fins de projeto de banco de dados, considera-se apenas duas cardinalidades mínimas: 0 e 1.
+
+A cardinalidade mínima 1, também conhecida como "associação obrigatória", indica que o relacionamento deve necessariamente associar uma ocorrência de entidade a cada ocorrência da outra entidade. Por outro lado, a cardinalidade mínima 0, chamada "associação opcional", indica que a associação não é obrigatória.
+
+A cardinalidade mínima é representada junto à cardinalidade máxima no diagrama, como mostrado na Figura 2.9. Nesse exemplo, relacionado à alocação de empregados a mesas, a cardinalidade mínima especifica que cada empregado deve obrigatoriamente ter uma mesa alocada a ele (cardinalidade mínima 1), enquanto uma mesa pode existir sem estar alocada a um empregado (cardinalidade mínima 0).
