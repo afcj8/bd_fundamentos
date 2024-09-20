@@ -101,3 +101,8 @@ Além da cardinalidade máxima, o modelo ER também pode representar o número m
 A cardinalidade mínima 1, também conhecida como "associação obrigatória", indica que o relacionamento deve necessariamente associar uma ocorrência de entidade a cada ocorrência da outra entidade. Por outro lado, a cardinalidade mínima 0, chamada "associação opcional", indica que a associação não é obrigatória.
 
 A cardinalidade mínima é representada junto à cardinalidade máxima no diagrama, como mostrado na Figura 2.9. Nesse exemplo, relacionado à alocação de empregados a mesas, a cardinalidade mínima especifica que cada empregado deve obrigatoriamente ter uma mesa alocada a ele (cardinalidade mínima 1), enquanto uma mesa pode existir sem estar alocada a um empregado (cardinalidade mínima 0).
+
+<div align="center">
+    <img src="../imgs/cardinalidade_minima.png" width="50%"/>
+    <p>Figura 2.9: Cardinalidade mínima de relacionamento.</p>
+</div>
