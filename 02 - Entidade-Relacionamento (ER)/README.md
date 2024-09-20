@@ -81,4 +81,15 @@ A cardinalidade máxima é utilizada para classificar relacionamentos binários,
 
 Em um relacionamento ternário, a cardinalidade refere-se a pares de entidades. Em um relacionamento R envolvendo três entidades A, B e C, a cardinalidade máxima entre A e B em R indica quantas ocorrências de C podem estar associadas a um par de ocorrências de A e B.
 
-No exemplo do relacionamento Distribuição, cada ocorrência associa três entidades: um produto a ser distribuído, uma cidade onde ocorre a distribuição e um distribuidor.
+No exemplo do relacionamento Distribuição, figura 2.8, cada ocorrência associa três entidades: um produto a ser distribuído, uma cidade onde ocorre a distribuição e um distribuidor.
+
+<div align="center">
+    <img src="../imgs/relacionamento_ternario.png" width="50%"/>
+    <p>Figura 2.8: Cardinalidade em relacionamentos ternários.</p>
+</div>
+
+A cardinalidade "1" refere-se ao par cidade e produto, indicando que cada combinação de cidade e produto está associada a, no máximo, um distribuidor, ou seja, não há concorrência na distribuição de um produto em uma cidade.
+
+Para o par cidade e distribuidor, podem estar associados vários produtos, ou seja, um distribuidor pode distribuir muitos produtos em uma cidade.
+
+Para o par produto e distribuidor, podem estar associadas várias cidades, ou seja, um distribuidor pode distribuir um produto em diversas cidade
