@@ -168,3 +168,10 @@ Nesses casos, costuma-se incluir um atributo na entidade genérica que identific
 As entidades associativas são essenciais na modelagem de dados, especialmente em cenários que envolvem relacionamentos complexos, como os muitos-para-muitos. Essas entidades intermediárias são usadas para simplificar a estrutura do banco de dados e, ao mesmo tempo, permitir o armazenamento de informações adicionais sobre a relação entre outras entidades.
 
 Em vez de tratar o relacionamento como uma simples associação entre entidades, ele é transformado em uma entidade própria, com seus próprios atributos. Isso é especialmente útil quando há a necessidade de registrar detalhes específicos sobre a relação, além dos dados pertencentes às entidades principais.
+
+Na Figura 2.15, por exemplo, o relacionamento CONSULTA é representado graficamente como uma entidade associativa, indicada pelo retângulo ao redor do relacionamento. Assim, CONSULTA passa a ser tratada como uma entidade e pode, por sua vez, se relacionar com outras entidades, como MEDICAMENTO.
+
+<div align="center">
+    <img src="../imgs/entidade_associativa.png" width="50%"/>
+    <p>Figura 2.15: Entidade associativa.</p>
+</div>
