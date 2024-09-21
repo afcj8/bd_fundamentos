@@ -125,3 +125,9 @@ Assim como as entidades, os relacionamentos também podem possuir atributos. A F
     <img src="../imgs/atributo_relacionamento.png" width="50%"/>
     <p>Figura 2.11: Atributo de relacionamento.</p>
 </div>
+
+### 2.4.1. Identificando Entidades
+
+Cada entidade deve possuir um identificador, que é um conjunto de um ou mais atributos cujos valores servem para distinguir uma ocorrência da entidade das demais ocorrências.
+
+O caso mais simples é aquele em que a entidade possui um único atributo como identificador. No Diagrama Entidade-Relacionamento (DER), os atributos identificadores são representados por um sublinhado. No exemplo da Figura 2.12, o atributo código é o identificador, indicando que cada pessoa possui um código único. Por outro lado, os atributos nome e endereço não são identificadores, pois o mesmo nome ou endereço pode ser associado a diferentes pessoas.
