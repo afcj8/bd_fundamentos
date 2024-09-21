@@ -162,3 +162,27 @@ Nesses casos, costuma-se incluir um atributo na entidade genérica que identific
     <img src="../imgs/generalizacao_parcial.png" width="50%"/>
     <p>Figura 2.14: Generalização/especialização parcial.</p>
 </div>
+
+## 2.6. Entidade Associativa
+
+As entidades associativas são essenciais na modelagem de dados, especialmente em cenários que envolvem relacionamentos complexos, como os muitos-para-muitos. Essas entidades intermediárias são usadas para simplificar a estrutura do banco de dados e, ao mesmo tempo, permitir o armazenamento de informações adicionais sobre a relação entre outras entidades.
+
+Em vez de tratar o relacionamento como uma simples associação entre entidades, ele é transformado em uma entidade própria, com seus próprios atributos. Isso é especialmente útil quando há a necessidade de registrar detalhes específicos sobre a relação, além dos dados pertencentes às entidades principais.
+
+Na Figura 2.15, por exemplo, o relacionamento CONSULTA é representado graficamente como uma entidade associativa, indicada pelo retângulo ao redor do relacionamento. Assim, CONSULTA passa a ser tratada como uma entidade e pode, por sua vez, se relacionar com outras entidades, como MEDICAMENTO.
+
+<div align="center">
+    <img src="../imgs/entidade_associativa.png" width="50%"/>
+    <p>Figura 2.15: Entidade associativa.</p>
+</div>
+
+Caso o conceito de entidade associativa não fosse utilizado, seria necessário transformar o relacionamento CONSULTA em uma entidade, para que pudesse ser relacionada a MEDICAMENTO, conforme ilustrado na Figura 2.16.
+
+<div align="center">
+    <img src="../imgs/substituindo_relacionamento_por_entidade.png" width="50%"/>
+    <p>Figura 2.16: Substituindo relacionamento por entidade.</p>
+</div>
+
+Observa-se que, para manter a equivalência com o diagrama anterior, uma consulta está relacionada a exatamente um médico e um paciente (com cardinalidade mínima e máxima igual a 1). Isso significa que uma consulta é identificada de maneira única pelo médico e paciente a ela associados. Ao substituir o relacionamento CONSULTA por uma entidade, torna-se possível relacionar essa nova entidade com a entidade MEDICAMENTO.
+
+Vale destacar que o diagrama da Figura 2.16 é equivalente ao da Figura 2.15, no sentido de que ambos resultam na criação do mesmo esquema de banco de dados relacional. A equivalência aqui refere-se à preservação da integridade e da estrutura de dados, mesmo que a representação gráfica tenha sido modificada.
