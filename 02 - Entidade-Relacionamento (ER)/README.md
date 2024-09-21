@@ -149,3 +149,7 @@ Em resumo, o diagrama expressa que toda PESSOA FÍSICA tem como atributos nome, 
     <img src="../imgs/generalizacao.png" width="50%"/>
     <p>Figura 2.13: Generalização/especialização.</p>
 </div>
+
+A generalização/especialização pode ser classificada em dois tipos: total (t) ou parcial (p), dependendo da obrigatoriedade de uma ocorrência da entidade genérica estar associada a uma ocorrência da entidade especializada.
+
+Na generalização/especialização total, para cada ocorrência da entidade genérica, sempre existe uma correspondência em uma das entidades especializadas. Por exemplo, conforme a Figura 2.13, toda ocorrência da entidade PESSOA está associada a uma ocorrência em uma das especializações, seja PESSOA FÍSICA ou PESSOA JURÍDICA.
