@@ -182,3 +182,7 @@ Caso o conceito de entidade associativa não fosse utilizado, seria necessário 
     <img src="../imgs/substituindo_relacionamento_por_entidade.png" width="50%"/>
     <p>Figura 2.16: Substituindo relacionamento por entidade.</p>
 </div>
+
+Observa-se que, para manter a equivalência com o diagrama anterior, uma consulta está relacionada a exatamente um médico e um paciente (com cardinalidade mínima e máxima igual a 1). Isso significa que uma consulta é identificada de maneira única pelo médico e paciente a ela associados. Ao substituir o relacionamento CONSULTA por uma entidade, torna-se possível relacionar essa nova entidade com a entidade MEDICAMENTO.
+
+Vale destacar que o diagrama da Figura 2.16 é equivalente ao da Figura 2.15, no sentido de que ambos resultam na criação do mesmo esquema de banco de dados relacional. A equivalência aqui refere-se à preservação da integridade e da estrutura de dados, mesmo que a representação gráfica tenha sido modificada.
