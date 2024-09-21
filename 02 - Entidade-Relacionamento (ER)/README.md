@@ -136,3 +136,29 @@ O caso mais simples é aquele em que a entidade possui um único atributo como i
     <img src="../imgs/identificador_entidade.png" width="50%"/>
     <p>Figura 2.12: Identificando entidade.</p>
 </div>
+
+## 2.5. Generalização 
+
+Além de relacionamentos e atributos, propriedades podem ser atribuídas a entidades por meio do conceito de generalização/especialização. Esse conceito permite atribuir propriedades específicas a um subconjunto especializado de uma entidade genérica. A representação gráfica da generalização/especialização é um triângulo isósceles, como ilustrado na Figura 2.13. Nesse exemplo, a entidade PESSOA é subdividida em dois subconjuntos: PESSOA FÍSICA e PESSOA JURÍDICA, cada um com suas propriedades particulares.
+
+A generalização/especialização também envolve o conceito de herança de propriedades. Isso significa que cada ocorrência da entidade especializada herda, além de suas próprias propriedades (atributos, relacionamentos e generalizações/especializações), as propriedades da entidade genérica correspondente. No DER da Figura 2.13, por exemplo, a entidade PESSOA FÍSICA possui, além de seus atributos específicos (cpf e sexo), todas as propriedades da entidade PESSOA, como os atributos nome e código, sendo identificada pelo atributo código. Da mesma forma, a entidade PESSOA JURÍDICA possui os atributos nome, código, cnpj e tipo de organização, e também é identificada pelo atributo código.
+
+Em resumo, o diagrama expressa que toda PESSOA FÍSICA tem como atributos nome, código, cpf e sexo, e é identificada pelo código. De maneira análoga, toda PESSOA JURÍDICA tem como atributos nome, código, cnpj e tipo de organização, sendo igualmente identificada pelo código.
+
+<div align="center">
+    <img src="../imgs/generalizacao.png" width="50%"/>
+    <p>Figura 2.13: Generalização/especialização.</p>
+</div>
+
+A generalização/especialização pode ser classificada em dois tipos: total (t) ou parcial (p), dependendo da obrigatoriedade de uma ocorrência da entidade genérica estar associada a uma ocorrência da entidade especializada.
+
+Na generalização/especialização total, para cada ocorrência da entidade genérica, sempre existe uma correspondência em uma das entidades especializadas. Por exemplo, conforme a Figura 2.13, toda ocorrência da entidade PESSOA está associada a uma ocorrência em uma das especializações, seja PESSOA FÍSICA ou PESSOA JURÍDICA.
+
+Na generalização/especialização parcial, nem toda ocorrência da entidade genérica está associada a uma ocorrência em uma das entidades especializadas. No exemplo da Figura 2.14, nem todos os funcionários são motoristas ou secretárias, o que caracteriza a especialização parcial.
+
+Nesses casos, costuma-se incluir um atributo na entidade genérica que identifica o tipo de ocorrência. No exemplo citado, o atributo seria tipo de funcionário. Esse atributo não é necessário em especializações totais, uma vez que a própria existência da entidade em uma das especializações já define seu tipo.
+
+<div align="center">
+    <img src="../imgs/generalizacao_parcial.png" width="50%"/>
+    <p>Figura 2.14: Generalização/especialização parcial.</p>
+</div>
