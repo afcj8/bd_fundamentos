@@ -106,3 +106,22 @@ A cardinalidade mínima é representada junto à cardinalidade máxima no diagra
     <img src="../imgs/cardinalidade_minima.png" width="50%"/>
     <p>Figura 2.9: Cardinalidade mínima de relacionamento.</p>
 </div>
+
+## 2.4. Atributo
+
+Para associar informações a ocorrências de entidades ou relacionamentos, utiliza-se o conceito de atributo. Um atributo é um dado associado a cada ocorrência de uma entidade ou relacionamento.
+
+Graficamente, os atributos são representados conforme ilustrado na Figura 2.10. A figura mostra que, para cada ocorrência da entidade Projeto, são associados exatamente um código, um nome e um tipo.
+
+<div align="center">
+    <img src="../imgs/atributos.png" width="50%"/>
+    <p>Figura 2.10: Atributos de uma entidade.</p>
+</div>
+
+
+Assim como as entidades, os relacionamentos também podem possuir atributos. A Figura 2.11 ilustra um Diagrama Entidade-Relacionamento (DER) em que o relacionamento Atuação tem um atributo que representa a função que um engenheiro exerce dentro de um projeto. Esse atributo não pode ser considerado parte da entidade Engenheiro, pois um engenheiro pode atuar em diversos projetos exercendo diferentes funções. Da mesma forma, não pode ser atribuído à entidade Projeto, uma vez que em um projeto podem atuar vários engenheiros com funções distintas.
+
+<div align="center">
+    <img src="../imgs/atributo_relacionamento.png" width="50%"/>
+    <p>Figura 2.11: Atributo de relacionamento.</p>
+</div>
