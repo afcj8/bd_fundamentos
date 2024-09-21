@@ -117,3 +117,6 @@ Graficamente, os atributos são representados conforme ilustrado na Figura 2.10.
     <img src="../imgs/atributos.png" width="50%"/>
     <p>Figura 2.10: Atributos de uma entidade.</p>
 </div>
+
+
+Assim como as entidades, os relacionamentos também podem possuir atributos. A Figura 2.11 ilustra um Diagrama Entidade-Relacionamento (DER) em que o relacionamento Atuação tem um atributo que representa a função que um engenheiro exerce dentro de um projeto. Esse atributo não pode ser considerado parte da entidade Engenheiro, pois um engenheiro pode atuar em diversos projetos exercendo diferentes funções. Da mesma forma, não pode ser atribuído à entidade Projeto, uma vez que em um projeto podem atuar vários engenheiros com funções distintas.
