@@ -175,3 +175,10 @@ Na Figura 2.15, por exemplo, o relacionamento CONSULTA é representado graficame
     <img src="../imgs/entidade_associativa.png" width="50%"/>
     <p>Figura 2.15: Entidade associativa.</p>
 </div>
+
+Caso o conceito de entidade associativa não fosse utilizado, seria necessário transformar o relacionamento CONSULTA em uma entidade, para que pudesse ser relacionada a MEDICAMENTO, conforme ilustrado na Figura 2.16.
+
+<div align="center">
+    <img src="../imgs/substituindo_relacionamento_por_entidade.png" width="50%"/>
+    <p>Figura 2.16: Substituindo relacionamento por entidade.</p>
+</div>
