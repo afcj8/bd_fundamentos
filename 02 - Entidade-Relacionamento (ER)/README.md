@@ -139,8 +139,13 @@ O caso mais simples é aquele em que a entidade possui um único atributo como i
 
 ## 2.5. Generalização 
 
-Além de relacionamentos e atributos, propriedades podem ser atribuídas a entidades por meio do conceito de generalização/especialização. Esse conceito permite atribuir propriedades específicas a um subconjunto especializado de uma entidade genérica. A representação gráfica da generalização/especialização é um triângulo isósceles, como ilustrado na Figura 2.13. Nesse exemplo, a entidade CLIENTE é subdividida em dois subconjuntos: PESSOA FÍSICA e PESSOA JURÍDICA, cada um com suas propriedades particulares.
+Além de relacionamentos e atributos, propriedades podem ser atribuídas a entidades por meio do conceito de generalização/especialização. Esse conceito permite atribuir propriedades específicas a um subconjunto especializado de uma entidade genérica. A representação gráfica da generalização/especialização é um triângulo isósceles, como ilustrado na Figura 2.13. Nesse exemplo, a entidade PESSOA é subdividida em dois subconjuntos: PESSOA FÍSICA e PESSOA JURÍDICA, cada um com suas propriedades particulares.
 
-A generalização/especialização também envolve o conceito de herança de propriedades. Isso significa que cada ocorrência da entidade especializada herda, além de suas próprias propriedades (atributos, relacionamentos e generalizações/especializações), as propriedades da entidade genérica correspondente. No DER da Figura 2.13, por exemplo, a entidade PESSOA FÍSICA possui, além de seus atributos específicos (cpf e sexo), todas as propriedades da entidade CLIENTE, como os atributos nome e código, sendo identificada pelo atributo código. Da mesma forma, a entidade PESSOA JURÍDICA possui os atributos nome, código, cnpj e tipo de organização, e também é identificada pelo atributo código.
+A generalização/especialização também envolve o conceito de herança de propriedades. Isso significa que cada ocorrência da entidade especializada herda, além de suas próprias propriedades (atributos, relacionamentos e generalizações/especializações), as propriedades da entidade genérica correspondente. No DER da Figura 2.13, por exemplo, a entidade PESSOA FÍSICA possui, além de seus atributos específicos (cpf e sexo), todas as propriedades da entidade PESSOA, como os atributos nome e código, sendo identificada pelo atributo código. Da mesma forma, a entidade PESSOA JURÍDICA possui os atributos nome, código, cnpj e tipo de organização, e também é identificada pelo atributo código.
 
 Em resumo, o diagrama expressa que toda PESSOA FÍSICA tem como atributos nome, código, cpf e sexo, e é identificada pelo código. De maneira análoga, toda PESSOA JURÍDICA tem como atributos nome, código, cnpj e tipo de organização, sendo igualmente identificada pelo código.
+
+<div align="center">
+    <img src="../imgs/generalizacao.png" width="50%"/>
+    <p>Figura 2.13: Generalização/especialização.</p>
+</div>
