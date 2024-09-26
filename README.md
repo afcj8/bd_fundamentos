@@ -6,7 +6,7 @@ O SGBD é um software responsável pela manipulação e gerenciamento dos dados,
 
 Nos tipos mais comuns de bancos de dados em uso atualmente, as informações são organizadas em linhas e colunas de tabelas, facilitando o processamento e a consulta. A maioria desses bancos utiliza a linguagem de consulta estruturada (SQL) para manipulação e consulta de dados.
 
-A figura 1.1 abaixo ilustra um sistema de banco de dados, composto por dados, hardware, software e usuários. Observa-se que o SGBD é responsável pelo gerenciamento do banco de dados.
+A Figura 1.1 abaixo ilustra um sistema de banco de dados, composto por dados, hardware, software e usuários. Observa-se que o SGBD é responsável pelo gerenciamento do banco de dados.
 
 <div align="center">
     <img src="./imgs/sistema_bd.png" width="50%"/>
