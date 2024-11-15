@@ -35,3 +35,10 @@ Tabela aluno_telefone:
 | 1        | 48 1111111111 |
 | 1        | 21 2222222222 |
 | 2        | 11 3333333333 |
+
+## 3.2. Segunda Forma Normal (2FN)
+
+Uma tabela está na 2FN quando:
+
+- Atende à 1FN.
+- Todos os atributos que não são chave dependem unicamente da chave primária.
