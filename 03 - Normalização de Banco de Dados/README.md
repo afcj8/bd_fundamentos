@@ -23,12 +23,14 @@ Uma tabela está na 1FN quando:
 
 **Solução (1FN aplicada):**
 
+1. Dividir a coluna `endereço` em colunas atômicas:
+
 | id_aluno | nome  | rua   | numero | bairro   | cidade    |
 | -------- | ----- | ----- | ------ | -------- | --------- |
 | 1        | João  | Rua A |  101   | Bairro X | Curitiba  |
 | 2        | Maria | Rua C |  202   | Centro   | São Paulo |
 
-Tabela aluno_telefone:
+2. Criar uma tabela `aluno_telefone` para os números de telefone:
 
 | id_aluno | telefone      |
 | -------- | ------------- |
@@ -90,9 +92,15 @@ Uma tabela está na 3FN quando:
 
 **Solução (3FN aplicada):**
 
+1. Remover a coluna `total` da tabela:
+
 | id_compra | id_curso | data_compra | valor_unitario | quantidade |
 | --------- | -------- | ----------- | -------------- | ---------- |
 | 1         | 2        | 02/05/2024  |  280.00        | 3          |
 | 2         | 5        | 03/08/2024  |  349.00        | 2          |
 
-O campo `total` pode ser calculado dinamicamente: `total = quantidade * valor_unitário`
+2. Calcular `total` dinamicamente:
+
+    - O campo `total` pode ser calculado dinamicamente: `total = quantidade * valor_unitário`.
+
+A normalização é essencial para garantir a integridade dos dados, evitando redundâncias e inconsistências. Cada forma normal apresenta critérios adicionais que devem ser seguidos para aprimorar a estrutura do banco de dados. Esses ajustes podem melhorar o desempenho de consultas e a manutenção do sistema, garantindo que os dados sejam armazenados de forma eficiente e consistente.
