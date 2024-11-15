@@ -128,43 +128,52 @@ Assim como as entidades, os relacionamentos também podem possuir atributos. A F
 
 ### 2.4.1 Atributos Multivalorados
 
-Atributos multivalorados são aqueles que podem conter múltiplos valores para um mesmo registro ou entidade. Por exemplo, o atributo "telefones" de um cliente pode armazenar vários números de telefone.
+Atributos multivalorados são aqueles que podem conter múltiplos valores para um mesmo registro ou entidade. Por exemplo, o atributo "telefone" de um cliente pode armazenar vários números de telefone. A Figura 2.12 a seguir ilustra esse exemplo.
 
-### 2.4.1. Identificando Entidades
+<div align="center">
+    <img src="../imgs/atributo_multivalorado.png" width="30%" style="max-height: 50vh;"/>
+    <p>Figura 2.12: Atributo multivalorado.</p>
+</div>
+
+Embora sejam úteis para representar informações que possuem múltiplos valores, atributos multivalorados podem levar a desafios no gerenciamento de dados. A normalização do banco de dados sugere evitar atributos multivalorados, pois eles podem dificultar consultas, atualizações e a manutenção da integridade dos dados.
+
+Uma alternativa é criar uma relação separada para os valores múltiplos. No caso de "telefone", em vez de armazenar vários números em um único atributo, pode-se criar uma tabela chamada "Telefone" com uma relação de chave estrangeira para o cliente, garantindo maior flexibilidade e eficiência no armazenamento e recuperação das informações.
+
+### 2.4.2. Identificando Entidades
 
 Cada entidade deve possuir um identificador, que é um conjunto de um ou mais atributos cujos valores servem para distinguir uma ocorrência da entidade das demais ocorrências.
 
-O caso mais simples é aquele em que a entidade possui um único atributo como identificador. No Diagrama Entidade-Relacionamento (DER), os atributos identificadores são representados por um sublinhado. No exemplo da Figura 2.12, o atributo código é o identificador, indicando que cada pessoa possui um código único. Por outro lado, os atributos nome e endereço não são identificadores, pois o mesmo nome ou endereço pode ser associado a diferentes pessoas.
+O caso mais simples é aquele em que a entidade possui um único atributo como identificador. No Diagrama Entidade-Relacionamento (DER), os atributos identificadores são representados por um sublinhado. No exemplo da Figura 2.13, o atributo código é o identificador, indicando que cada pessoa possui um código único. Por outro lado, os atributos nome e endereço não são identificadores, pois o mesmo nome ou endereço pode ser associado a diferentes pessoas.
 
 <div align="center">
     <img src="../imgs/identificador_entidade.png" width="30%" style="max-height: 50vh;"/>
-    <p>Figura 2.12: Identificando entidade.</p>
+    <p>Figura 2.13: Identificando entidade.</p>
 </div>
 
 ## 2.5. Generalização 
 
-Além de relacionamentos e atributos, propriedades podem ser atribuídas a entidades por meio do conceito de generalização/especialização. Esse conceito permite atribuir propriedades específicas a um subconjunto especializado de uma entidade genérica. A representação gráfica da generalização/especialização é um triângulo isósceles, como ilustrado na Figura 2.13. Nesse exemplo, a entidade PESSOA é subdividida em dois subconjuntos: PESSOA FÍSICA e PESSOA JURÍDICA, cada um com suas propriedades particulares.
+Além de relacionamentos e atributos, propriedades podem ser atribuídas a entidades por meio do conceito de generalização/especialização. Esse conceito permite atribuir propriedades específicas a um subconjunto especializado de uma entidade genérica. A representação gráfica da generalização/especialização é um triângulo isósceles, como ilustrado na Figura 2.14. Nesse exemplo, a entidade PESSOA é subdividida em dois subconjuntos: PESSOA FÍSICA e PESSOA JURÍDICA, cada um com suas propriedades particulares.
 
-A generalização/especialização também envolve o conceito de herança de propriedades. Isso significa que cada ocorrência da entidade especializada herda, além de suas próprias propriedades (atributos, relacionamentos e generalizações/especializações), as propriedades da entidade genérica correspondente. No DER da Figura 2.13, por exemplo, a entidade PESSOA FÍSICA possui, além de seus atributos específicos (cpf e sexo), todas as propriedades da entidade PESSOA, como os atributos nome e código, sendo identificada pelo atributo código. Da mesma forma, a entidade PESSOA JURÍDICA possui os atributos nome, código, cnpj e tipo de organização, e também é identificada pelo atributo código.
+A generalização/especialização também envolve o conceito de herança de propriedades. Isso significa que cada ocorrência da entidade especializada herda, além de suas próprias propriedades (atributos, relacionamentos e generalizações/especializações), as propriedades da entidade genérica correspondente. No DER da Figura 2.14, por exemplo, a entidade PESSOA FÍSICA possui, além de seus atributos específicos (cpf e sexo), todas as propriedades da entidade PESSOA, como os atributos nome e código, sendo identificada pelo atributo código. Da mesma forma, a entidade PESSOA JURÍDICA possui os atributos nome, código, cnpj e tipo de organização, e também é identificada pelo atributo código.
 
 Em resumo, o diagrama expressa que toda PESSOA FÍSICA tem como atributos nome, código, cpf e sexo, e é identificada pelo código. De maneira análoga, toda PESSOA JURÍDICA tem como atributos nome, código, cnpj e tipo de organização, sendo igualmente identificada pelo código.
 
 <div align="center">
     <img src="../imgs/generalizacao.png" width="50%" style="max-height: 50vh;"/>
-    <p>Figura 2.13: Generalização/especialização.</p>
+    <p>Figura 2.14: Generalização/especialização.</p>
 </div>
 
 A generalização/especialização pode ser classificada em dois tipos: total (t) ou parcial (p), dependendo da obrigatoriedade de uma ocorrência da entidade genérica estar associada a uma ocorrência da entidade especializada.
 
-Na generalização/especialização total, para cada ocorrência da entidade genérica, sempre existe uma correspondência em uma das entidades especializadas. Por exemplo, conforme a Figura 2.13, toda ocorrência da entidade PESSOA está associada a uma ocorrência em uma das especializações, seja PESSOA FÍSICA ou PESSOA JURÍDICA.
+Na generalização/especialização total, para cada ocorrência da entidade genérica, sempre existe uma correspondência em uma das entidades especializadas. Por exemplo, conforme a Figura 2.14, toda ocorrência da entidade PESSOA está associada a uma ocorrência em uma das especializações, seja PESSOA FÍSICA ou PESSOA JURÍDICA.
 
-Na generalização/especialização parcial, nem toda ocorrência da entidade genérica está associada a uma ocorrência em uma das entidades especializadas. No exemplo da Figura 2.14, nem todos os funcionários são motoristas ou secretárias, o que caracteriza a especialização parcial.
+Na generalização/especialização parcial, nem toda ocorrência da entidade genérica está associada a uma ocorrência em uma das entidades especializadas. No exemplo da Figura 2.15, nem todos os funcionários são motoristas ou secretárias, o que caracteriza a especialização parcial.
 
 Nesses casos, costuma-se incluir um atributo na entidade genérica que identifica o tipo de ocorrência. No exemplo citado, o atributo seria tipo de funcionário. Esse atributo não é necessário em especializações totais, uma vez que a própria existência da entidade em uma das especializações já define seu tipo.
 
 <div align="center">
     <img src="../imgs/generalizacao_parcial.png" width="50%" style="max-height: 50vh;"/>
-    <p>Figura 2.14: Generalização/especialização parcial.</p>
+    <p>Figura 2.15: Generalização/especialização parcial.</p>
 </div>
 
 ## 2.6. Entidade Associativa
@@ -173,18 +182,18 @@ As entidades associativas são essenciais na modelagem de dados, especialmente e
 
 Em vez de tratar o relacionamento como uma simples associação entre entidades, ele é transformado em uma entidade própria, com seus próprios atributos. Isso é especialmente útil quando há a necessidade de registrar detalhes específicos sobre a relação, além dos dados pertencentes às entidades principais.
 
-Na Figura 2.15, por exemplo, o relacionamento CONSULTA é representado graficamente como uma entidade associativa, indicada pelo retângulo ao redor do relacionamento. Assim, CONSULTA passa a ser tratada como uma entidade e pode, por sua vez, se relacionar com outras entidades, como MEDICAMENTO.
+Na Figura 2.16, por exemplo, o relacionamento CONSULTA é representado graficamente como uma entidade associativa, indicada pelo retângulo ao redor do relacionamento. Assim, CONSULTA passa a ser tratada como uma entidade e pode, por sua vez, se relacionar com outras entidades, como MEDICAMENTO.
 
 <div align="center">
     <img src="../imgs/entidade_associativa.png" width="50%"/>
-    <p>Figura 2.15: Entidade associativa.</p>
+    <p>Figura 2.16: Entidade associativa.</p>
 </div>
 
-Caso o conceito de entidade associativa não fosse utilizado, seria necessário transformar o relacionamento CONSULTA em uma entidade, para que pudesse ser relacionada a MEDICAMENTO, conforme ilustrado na Figura 2.16.
+Caso o conceito de entidade associativa não fosse utilizado, seria necessário transformar o relacionamento CONSULTA em uma entidade, para que pudesse ser relacionada a MEDICAMENTO, conforme ilustrado na Figura 2.17.
 
 <div align="center">
     <img src="../imgs/substituindo_relacionamento_por_entidade.png" width="50%"/>
-    <p>Figura 2.16: Substituindo relacionamento por entidade.</p>
+    <p>Figura 2.17: Substituindo relacionamento por entidade.</p>
 </div>
 
 Observa-se que, para manter a equivalência com o diagrama anterior, uma consulta está relacionada a exatamente um médico e um paciente (com cardinalidade mínima e máxima igual a 1). Isso significa que uma consulta é identificada de maneira única pelo médico e paciente a ela associados. Ao substituir o relacionamento CONSULTA por uma entidade, torna-se possível relacionar essa nova entidade com a entidade MEDICAMENTO.
