@@ -76,3 +76,23 @@ Uma tabela está na 3FN quando:
 
 - Atende à 2FN.
 - Não existem dependências transitivas entre os atributos que não são chave.
+
+**Exemplo sem normalização:**
+
+| id_compra | id_curso | data_compra | valor_unitario | quantidade | total  |
+| --------- | -------- | ----------- | -------------- | ---------- | ------ |
+| 1         | 2        | 02/05/2024  |  280.00        | 3          | 840.00 |
+| 2         | 5        | 03/08/2024  |  349.00        | 2          | 698.00 |
+
+**Problemas:**
+
+- A coluna `total` depende de `quantidade` e `valor_unitário`, não diretamente de `id_compra`.
+
+**Solução (3FN aplicada):**
+
+| id_compra | id_curso | data_compra | valor_unitario | quantidade |
+| --------- | -------- | ----------- | -------------- | ---------- |
+| 1         | 2        | 02/05/2024  |  280.00        | 3          |
+| 2         | 5        | 03/08/2024  |  349.00        | 2          |
+
+O campo `total` pode ser calculado dinamicamente: `total = quantidade * valor_unitário`
