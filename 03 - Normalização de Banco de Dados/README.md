@@ -11,3 +11,27 @@ Uma tabela está na 1FN quando:
 
 **Exemplo sem normalização:**
 
+| id_aluno | nome  | telefone | endereço |
+| -------- | ----- | -------- | -------- |
+| 1        | João  | 48 1111111111, 21 2222222222 | Rua A, 101, Bairro X, Curitiba |
+| 2        | Maria | 11 3333333333 | Rua C, 202, Centro, São Paulo |
+
+**Problemas:**
+
+- A coluna `endereço` armazena informações compostas.
+- A coluna `telefone` contém múltiplos valores, dificultando consultas.
+
+**Solução (1FN aplicada):**
+
+| id_aluno | nome  | rua   | numero | bairro   | cidade    |
+| -------- | ----- | ----- | ------ | -------- | --------- |
+| 1        | João  | Rua A |  101   | Bairro X | Curitiba  |
+| 2        | Maria | Rua C |  202   | Centro   | São Paulo |
+
+Tabela aluno_telefone:
+
+| id_aluno | telefone      |
+| -------- | ------------- |
+| 1        | 48 1111111111 |
+| 1        | 21 2222222222 |
+| 2        | 11 3333333333 |
