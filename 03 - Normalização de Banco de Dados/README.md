@@ -69,3 +69,10 @@ Uma tabela está na 2FN quando:
 | -------- | ----------- | ------------ | -------- |
 | 1        |  02/05/2024 | 280.00       |  2       |
 | 2        |  03/08/2024 | 349.00       |  5       |
+
+## 3.3. Terceira Forma Normal (3FN)
+
+Uma tabela está na 3FN quando:
+
+- Atende à 2FN.
+- Não existem dependências transitivas entre os atributos que não são chave.
