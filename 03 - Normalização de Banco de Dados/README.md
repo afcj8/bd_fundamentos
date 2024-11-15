@@ -42,3 +42,30 @@ Uma tabela está na 2FN quando:
 
 - Atende à 1FN.
 - Todos os atributos que não são chave dependem unicamente da chave primária.
+
+**Exemplo sem normalização:**
+
+| id_venda | data_compra | valor_compra | id_curso | curso  |
+| -------- | ----------- | ------------ | -------- | ------ |
+| 1        |  02/05/2024 | 280.00       |  2       | Python |
+| 2        |  03/08/2024 | 349.00       |  5       | Java   |
+
+**Problemas:**
+
+- A coluna `curso` depende de `id_curso`, não de `id_venda`.
+
+**Solução (2FN aplicada):**
+
+1. Criar uma tabela para os cursos:
+
+| id_curso | curso  |
+| -------- | ------ |
+| 2        | Python |
+| 5        | Java   |
+
+2. Ajustar a tabela de vendas:
+
+| id_venda | data_compra | valor_compra | id_curso |
+| -------- | ----------- | ------------ | -------- |
+| 1        |  02/05/2024 | 280.00       |  2       |
+| 2        |  03/08/2024 | 349.00       |  5       |
