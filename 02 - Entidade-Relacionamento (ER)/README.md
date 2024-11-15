@@ -126,6 +126,10 @@ Assim como as entidades, os relacionamentos também podem possuir atributos. A F
     <p>Figura 2.11: Atributo de relacionamento.</p>
 </div>
 
+### 2.4.1 Atributos Multivalorados
+
+Atributos multivalorados são aqueles que podem conter múltiplos valores para um mesmo registro ou entidade. Por exemplo, o atributo "telefones" de um cliente pode armazenar vários números de telefone.
+
 ### 2.4.1. Identificando Entidades
 
 Cada entidade deve possuir um identificador, que é um conjunto de um ou mais atributos cujos valores servem para distinguir uma ocorrência da entidade das demais ocorrências.
